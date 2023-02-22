@@ -1,20 +1,23 @@
 import { useState } from "react";
 import { useEffect } from "react";
 
-const ItemDetail = () => {
-    const [item, setItem] = useState-({})
-useEffect(()=> {
-const promesa = new Promise((resolve) =>{
-    setTimeout(() => {
-        resolve(arrayProductos);
-    }, 2000);
-})
-},[]
-);
-
-
+const ItemDetail = ({item}) => {
     return(
-       <ItemDetail item={aa} />
+    <div className="container">
+        <div className="row">
+            <div className="col d-flex align-items-center justify-content-end">
+                <img src={item.imagen} alt={item.nombre} />
+            </div>
+            <div className="col">
+                <h1>{item.nombre}</h1>
+                <h5>{item.calorias} kcal</h5>
+                <p>{item.descripcion}</p>
+                <p><b>${item.precio}</b></p>
+            </div>
+        </div>
+    </div>
+
+
     )
 }
 export default ItemDetail;

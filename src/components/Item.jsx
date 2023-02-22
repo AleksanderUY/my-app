@@ -1,14 +1,15 @@
-const Item = ({Item}) => {
+import { Link } from "react-router-dom";
+
+const Item = ({item}) => {
     return (
-        <div className="container">
-        <div className="card">
-            <img src="..." className="card-img-top" alt={"..."}>
-                <div className="card-body">
-                    <h5 className="card-title">Card title</h5>
-                    <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <a to="#" className="btn btn-primary">Go somewhere</a>
+        <Link to={"/item/" + item.index} className="text-decoration-none text-dark">
+            <div className="card border-0">
+                <img src={item.imagen} className="card-img-top" alt={item.nombre} />
+                <div className="card-body text-center">
+                    <p className="card-title">{item.nombre}</p>
                 </div>
-           </div></div>
+            </div>
+        </Link>
     )
 }
 

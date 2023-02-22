@@ -1,5 +1,6 @@
 import logo from "./images/signosLogo.png"
 import CartWidget from "./CartWidget";
+import { Link, NavLink } from "react-router-dom";
 const NavBar = () => {
   return (
     <div className="container-fluid w-100">
@@ -22,28 +23,28 @@ const NavBar = () => {
               <div className="collapse navbar-collapse" id="navbarNav">
                 <ul className="navbar-nav">
                   <li className="nav-item">
-                    <a
+                    <NavLink
                       className="nav-link active"
                       aria-current="page"
                       href={'/'}
                     >
                       Home
-                    </a>
+                    </NavLink>
                   </li>
                   <li className="nav-item">
-                    <a className="nav-link" href={'/'}>
+                    <NavLink className="nav-link" href={'/category/Nosotros'}>
                       Nosotros
-                    </a>
+                    </NavLink>
                   </li>
                   <li className="nav-item">
-                    <a className="nav-link" href={'/'}>
+                    <NavLink className="nav-link" href={'/category/Precios'}>
                       Precios
-                    </a>
+                    </NavLink>
                   </li>
                   <li className="nav-item">
-                    <a className="nav-link" href={'/'}>
+                    <NavLink className="nav-link" href={'/category/Contacto'}>
                       Contacto
-                    </a>
+                    </NavLink>
                   </li>
                 </ul>
                 <div className="col d-flex justify-content-center ">
