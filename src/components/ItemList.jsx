@@ -1,10 +1,15 @@
-import Item from "./Item"
-const Item = () => {
+import Item from "./Item";
+
+const ItemList = ({items}) => {
     return (
-        <h2>aqui va el item</h2>
+        <div className="row">
+            {items.map(item => (
+            <div className="col-md-4" key={item.index}>
+                <Item item={item} />
+            </div>
+        ))}
+        </div>
     )
-        }
-
-
+}
 
 export default ItemList;

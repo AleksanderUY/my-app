@@ -6,9 +6,9 @@ const NavBar = () => {
     <div className="container-fluid w-100">
           <nav className="navbar navbar-expand-lg bg-body-tertiary">
             <div className="container-fluid " >
-              <a className="navbar-brand" href={'/'}>
+              <NavLink className="navbar-brand" href={'/'}>
                 <img src={logo} alt="logo" width={"70%"} />
-              </a>
+              </NavLink>
               <button
                 className="navbar-toggler"
                 type="button"
@@ -28,22 +28,22 @@ const NavBar = () => {
                       aria-current="page"
                       href={'/'}
                     >
-                      Home
+                     productos
                     </NavLink>
                   </li>
                   <li className="nav-item">
-                    <NavLink className="nav-link" href={'/category/Nosotros'}>
-                      Nosotros
+                    <NavLink className="nav-link" href={'/category/hamburguesas'}>
+                    hamburguesas
                     </NavLink>
                   </li>
                   <li className="nav-item">
-                    <NavLink className="nav-link" href={'/category/Precios'}>
-                      Precios
+                    <NavLink className="nav-link" href={'/category/papas'}>
+                    papas
                     </NavLink>
                   </li>
                   <li className="nav-item">
-                    <NavLink className="nav-link" href={'/category/Contacto'}>
-                      Contacto
+                    <NavLink className="nav-link" href={'/category/postres'}>
+                    postres
                     </NavLink>
                   </li>
                 </ul>
