@@ -13,17 +13,15 @@ function App() {
 
    <BrowserRouter> 
    <NavBar />
-   <Fold />
-   <ItemDetailContainer />
     <Routes>
-    
-   <Route exact path={'/'} element= {<ItemListContainer />} />
-   <Route exact path={'/category/:id'} element= {<ItemListContainer  />} />
-   <Route exact path={'/item/:id'} element= {<ItemDetailContainer  />} />
+    <Route exact path={'/'} element= {<Fold />} />
+   <Route exact path={'/productos'} element= {<ItemListContainer />} />
+   <Route exact path={'/categoria/:index'} element= {<ItemListContainer  />} />
+   <Route exact path={'/item/:index'} element= {<ItemDetailContainer  />} />
    <Route exact path={'*'} element= {<Error404  />} />
    
    </Routes>
-   <Footer />
+   <Footer className={'Footer'} />
    </BrowserRouter>
   )
   }

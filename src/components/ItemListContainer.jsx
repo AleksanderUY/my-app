@@ -5,18 +5,18 @@ import arrayProductos from "./json/productos.json";
 
 const ItemListContainer = () => {
     const [items, setItems] = useState([]);
-    const {id} = useParams();
+    const {index} = useParams();
 
     useEffect(() => {
         const promesa = new Promise((resolve) => {
             setTimeout(() => {
-                resolve(id ? arrayProductos.filter(item => item.categoria === id) : arrayProductos);
+                resolve(index ? arrayProductos.filter(item => item.categoria === index) : arrayProductos);
             }, 2000);
         });
         promesa.then((respuesta) => {
             setItems(respuesta);
         });
-    }, [id]);
+    }, [index]);
 
     return (
         <div className="container">
